@@ -31,7 +31,7 @@ export class SignUp extends Component {
       );
       createUserProfileDocument(user, { displayName });
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
 

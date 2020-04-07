@@ -32,7 +32,7 @@ class App extends Component {
             //   console.log("currentUser...:", this.state.currentUser);
             // }
           );
-          console.log("currentUser...:", this.state.currentUser);
+          // console.log("currentUser...:", this.state.currentUser);
         });
       } else {
         this.setState({ currentUser: userAuth });
