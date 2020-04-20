@@ -1,4 +1,4 @@
-import { firestore } from "./firebaseUtils";
+import { firestore, auth } from "./firebaseUtils";
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
@@ -62,6 +62,15 @@ export const convertCollectionsSnapshotToMap = (collections) => {
     accumulator[collection.title.toLowerCase()] = collection;
     return accumulator;
   }, {});
+};
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject);
+  });
 };
 
 // firestore
