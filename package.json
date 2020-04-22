@@ -6,12 +6,12 @@
     "npm": "6.11.2"
   },
   "scripts": {
-    "client": "cd .. && cd client && yarn start",
+    "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "build": "cd .. && cd client && npm run build",
+    "build": "cd client && npm run build",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd .. && cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
