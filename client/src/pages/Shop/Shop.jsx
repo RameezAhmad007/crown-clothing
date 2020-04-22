@@ -28,4 +28,5 @@ function Shop({ fetchCollectionsStart, match }) {
 const mapDispatchToProps = (dispatch) => ({
   fetchCollectionsStart: () => dispatch(fetchCollectionsStart()),
 });
+
 export default connect(null, mapDispatchToProps)(Shop);
