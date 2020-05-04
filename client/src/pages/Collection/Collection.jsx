@@ -9,8 +9,6 @@ import {
 } from "./CollectionStyles";
 
 function Collection({ match, collection }) {
-  console.log("match...", match.params.collectionId);
-  console.log("collection...", collection);
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
